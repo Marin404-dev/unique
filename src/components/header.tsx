@@ -1,32 +1,46 @@
+import uniqueLogo from "../assets/unique_logo.png";
+import { IoPersonOutline } from "react-icons/io5";
+import { HiOutlineShoppingBag } from "react-icons/hi2";
+
 function Header() {
   return (
-    <div className="bg-red-100 p-6">
+    <div className="fixed top-0 left-0 right-0 z-50 bg-white flex items-center text-center p-3 border-b border-[#dadada] shadow">
+      <div className="flex flex-1 justify-center">
+        <nav className="flex flex-row self-center">
+          <a href="">
+            <p className="pl-8 pr-8">Home</p>
+          </a>
+          <a href="">
+            <p className="pl-8 pr-8">Apparel</p>
+          </a>
+        </nav>
 
-      <div className="bg-blue-50 justify-center text-center flex flex-row">
-        <div className="flex flex-row">
-          <p className="pl-6 pr-6">nav1</p>
-          <p className="pl-6 pr-6">nav 2</p>
+        <div className="pl-8 pr-8">
+          <img src={uniqueLogo} alt="unique logo" />
         </div>
 
-        <div>
-          <h1>unique</h1>
-        </div>
+        <nav className="flex flex-row self-center">
+          <a href="">
+            <p className="pl-8 pr-8">About us</p>
+          </a>
 
-        <div className="flex flex-row">
-          <p className="pl-6 pr-6">nav1</p>
-          <p className="pl-6 pr-6">nav 2</p>
-        </div>
-
-        {/* actions */}
-        <div className="flex ">
-          <p>icon</p>
-        </div>
+          <a href="">
+            <p className="pl-8 pr-8 text-[#c30022]">Sale</p>
+          </a>
+        </nav>
       </div>
 
-
-      header
+      {/* actions */}
+      <div className="absolute right-6 top-1/2 transform -translate-y-1/2 flex items-center space-x-4 z-60">
+        <button className="rounded hover:bg-gray-100">
+          <IoPersonOutline className="w-6 h-6" />
+        </button>
+        <button className="rounded hover:bg-gray-100">
+          <HiOutlineShoppingBag className="w-6 h-6" />
+        </button>
+      </div>
     </div>
-  )
+  );
 }
 
-export default Header
+export default Header;
