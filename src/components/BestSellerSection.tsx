@@ -1,6 +1,5 @@
 import product1 from "../assets/product1.png";
 import { TiShoppingCart } from "react-icons/ti";
-import { MdNavigateNext } from "react-icons/md";
 
 function BestSellerSection() {
   const headerHeight = 50;
