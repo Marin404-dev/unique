@@ -9,7 +9,7 @@ function Footer() {
     "Contact",
   ];
   const customerCare = [
-    "FAQ",
+    "FAq",
     "Shipping & Returns",
     "Size Guide",
     "Order Tracking",
