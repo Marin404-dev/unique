@@ -6,7 +6,7 @@ import HeroCarousel from "./components/HeroCarousel.tsx";
 import ProductOverview from "./components/ProductOverview.tsx";
 import CollectionOverview from "./components/CollectionOverview.tsx";
 import BestSellerSection from "./components/BestSellerSection.tsx";
-import Footer from "./components/footer.tsx";
+import Footer from "./components/Footer.tsx";
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
