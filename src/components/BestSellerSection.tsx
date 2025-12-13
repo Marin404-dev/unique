@@ -64,6 +64,9 @@ function BestSellerSection() {
           </div>
         ))}
       </div>
+      <div className="w-full mt-4  max-w-7xl p-8">
+        <hr className="border-t border-[#e5e5e5] border" />
+      </div>
     </div>
   );
 }

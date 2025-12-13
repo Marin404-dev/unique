@@ -25,7 +25,7 @@ export default function HeroCarousel() {
       style={{ height: `calc(100vh - ${headerHeight}px)` }}
     >
       {/* main wrapper: almost full screen width, centered, rounded and clipped */}
-      <div className="relative w-[90vw] max-w-8xl h-[85%] md:h-[80%] rounded-2xl overflow-hidden shadow-lg">
+      <div className="relative w-[95vw] max-w-8xl h-[85%] md:h-[80%] rounded-2xl overflow-hidden shadow-lg">
         <div ref={sliderRef} className="keen-slider h-full">
           <div
             className="keen-slider__slide number-slide1 flex items-center justify-center bg-cover bg-center"
@@ -63,24 +63,6 @@ export default function HeroCarousel() {
           >
             4
           </div>
-          <div
-            className="keen-slider__slide number-slide5 flex items-center justify-center bg-cover bg-center"
-            style={{
-              backgroundImage:
-                "linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url('/src/assets/hero5.jpg')",
-            }}
-          >
-            5
-          </div>
-          <div
-            className="keen-slider__slide number-slide6 flex items-center justify-center bg-cover bg-center"
-            style={{
-              backgroundImage:
-                "linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url('/src/assets/hero6.jpg')",
-            }}
-          >
-            6
-          </div>
         </div>
 
         {/* arrows - positioned inside the rounded container */}
@@ -92,7 +74,7 @@ export default function HeroCarousel() {
                 instanceRef.current?.prev();
               }}
               disabled={false}
-              className="absolute left-4 top-1/2 transform -translate-y-1/2 z-20 p-2 rounded-full"
+              className="absolute left-16 top-1/2 transform -translate-y-1/2 z-20 p-2 rounded-full"
               aria-label="Previous"
             >
               <svg
@@ -111,7 +93,7 @@ export default function HeroCarousel() {
                 instanceRef.current?.next();
               }}
               disabled={false}
-              className="absolute right-4 top-1/2 transform -translate-y-1/2 z-20 p-2 rounded-full"
+              className="absolute right-16 top-1/2 transform -translate-y-1/2 z-20 p-2 rounded-full"
               aria-label="Next"
             >
               <svg
@@ -128,7 +110,7 @@ export default function HeroCarousel() {
 
         {/* dots */}
         {loaded && instanceRef.current && (
-          <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 z-30 flex space-x-2">
+          <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 z-30 flex space-x-2">
             {[
               ...Array(instanceRef.current.track.details.slides.length).keys(),
             ].map((idx) => {
